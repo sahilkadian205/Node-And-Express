@@ -11,7 +11,7 @@ console.log('Statement 3 executed....');
 
 //Asynchronous
 //In Asynchronous way one statement can execute before its previous statement.
-//eg
+//eg-
 console.log('Statement 1 executed....');
 setTimeout(() => {
     console.log('Statement 2 executed....');
