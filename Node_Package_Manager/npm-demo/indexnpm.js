@@ -2,7 +2,7 @@
 //in node_modules folder.
 const _ = require('underscore');
 
-//Require resolves a module in following way - 
+//require() resolves a module in following way - 
 //e.g- require('underscore');
 //First require assumes that underscore is a built in module.
 //If not then it assumes that this module is present in current folder.
