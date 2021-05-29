@@ -34,6 +34,24 @@ console.log('Statement 3 executed....');
 //In real world application we store data in a database. So, to deal with database code we should have clear understanding of Asynchronous 
 //way of writing code.
 
+//Comment above settimeout() code to understand output of below code 
+
+console.log('Before');
+const result = getUser();
+console.log('Result is:', result);
+console.log('After');
+
+function getUser(){
+    setTimeout(() => {
+        console.log('Fetching User Details....');
+        return {id:1,name:'Sahil'};
+    }, 2000);
+}
+
+//You will see result is undefined. Why it happened.
+//Reason is by the time we call getUser() we will not have any data because the setTimeout function will return the data only after 2 seconds.
+//That's why we got undefined. To resolve this issue we have below patterns.
+
 //There are 3 patterns to implement Asynchronous code - 
 //1) Callbacks
 //2) Promises
