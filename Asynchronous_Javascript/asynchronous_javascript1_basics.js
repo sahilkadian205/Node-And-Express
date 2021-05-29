@@ -37,14 +37,14 @@ console.log('Statement 3 executed....');
 //Comment above settimeout() code to understand output of below code 
 
 console.log('Before');
-const result = getUser();
+const result = getUser(1);
 console.log('Result is:', result);
 console.log('After');
 
-function getUser(){
+function getUser(id){
     setTimeout(() => {
         console.log('Fetching User Details....');
-        return {id:1,name:'Sahil'};
+        return {id:id,name:'Sahil'};
     }, 2000);
 }
 
@@ -56,3 +56,5 @@ function getUser(){
 //1) Callbacks
 //2) Promises
 //3) Async And Await
+
+//There will be multiple Asynchronous function in one file.So, to see output of some Asynchronous code comment out other Asynchronous functions.
