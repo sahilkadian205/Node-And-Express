@@ -118,3 +118,13 @@ async function getCoursesRegularExpression(){
 //getCoursesCount() will return count of courses with Author = Mosh and price greater than 10 and name ends with Js
   
 getCoursesCount();
+
+//To implement pagination we use skip() and limit().
+//eg-
+// const pageNuber = 2
+// const pageSize = 10
+
+//  Course.
+//     find()
+//     .skip((pageNumber-1)*pageSize)
+//     .limit(pageSize)
