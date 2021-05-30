@@ -1,0 +1,12 @@
+1) After installing mongodb inside c: drive create a folder data and inside data folder create db folder - C:\data\db
+All data is stored here in db folder.
+
+2) Install mongodb compass as well. It's a mongodb GUI application.
+
+3) In my case the mongoimport command was not available by default on the system (windows PC), so first download from the official website the 
+additional tools provided by MongoDB, this includes mongoimport and others that you may not need.
+download from below link -
+https://www.mongodb.com/try/download/database-tools 
+
+export mongoimport.exe and paste this .exe file at "C:\Program Files\MongoDB\Server\4.4\bin"
+navigate using your terminal to the folder where the json file you want to import is located then run your mongoimport command.
