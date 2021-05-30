@@ -63,7 +63,7 @@ async function getCoursesOnBasisOfPrice(){
                     //.find({price : {$gte : 10} })  //courses with price greater than or equal to 10
                     //.find({price : {$gte : 10, $lt:20} })  //courses with price greater than or equal to 10 and less than 20
                     .find({price : {$in : [10,15,20]}})   //courses with price equal to 10 or 15 or 20
-                    .select({price:1,name:1,author:1});
+                    .select({price:1,name:1,author:1});  //or select('price name author')
 
     console.log(result);                
 }
@@ -74,14 +74,14 @@ getCoursesOnBasisOfPrice();
 //or
 //and
 
-//We pass array of conditions in or() and and(). We will use find() without any filter and then use or() or and().
+//We pass array of conditions in or() and and(). We will use find() with or without any filter and then use or() or and().
 //Using multiple filters in find() is similar to using and() logical operator as each filter is used with 'and' operator. 
 
-//Remember don't forget to write find() first only then use or() or and().
+//Remember don't forget to write find() with or without any filter first only then use or() or and().
 
 async function getCoursesLogicalOperator(){
     const result =  await Course
-                      .find()             //Don't forget to write find() first
+                      .find()
                       .or([{author:'Mosh'},{isPublished:true}])  //courses with author as mosh or isPublished is true
                       .select({author:1,isPublished:1,name:1});
   
