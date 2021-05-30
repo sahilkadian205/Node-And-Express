@@ -10,6 +10,10 @@ function print(callback) {
 //The print( ) function takes another function as a parameter and calls it inside. This is valid in JavaScript and we call it a “callback”. 
 //So a function that is passed to another function as a parameter is a callback function.
 
+//When we use callback function in a parameter we simply pass the reference of that function or define anonymously in parameter but never calls it-
+//function print(callback())  -this is wrong
+//function print(callback) -this is right
+
 // console.log('Before');
 // const result = getUser(1);
 // console.log('Result is:', result);
