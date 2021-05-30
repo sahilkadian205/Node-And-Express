@@ -104,3 +104,17 @@ async function getCoursesRegularExpression(){
   }
   
   getCoursesRegularExpression();
+
+  //use count() instead of select() if you want to know the number of count of documents fetched.
+
+  async function getCoursesCount(){
+    const result =  await Course
+                      .find({author:'Mosh',price:{$gt:10},name:/Js$/})  
+                      .count();
+  
+      console.log('Count is:',result);                
+  }
+
+//getCoursesCount() will return count of courses with Author = Mosh and price greater than 10 and name ends with Js
+  
+getCoursesCount();
