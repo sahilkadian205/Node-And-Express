@@ -46,7 +46,7 @@ async function createCourse(){
     }
     catch(ex){
         for(fields in ex.errors){
-            console.log(ex.errors[fields]);   //Now you can see errors more descriptively.This is called va;idation errors.
+            console.log(ex.errors[fields]);   //Now you can see errors more descriptively.This is called validation errors.
         }
     }
 }
