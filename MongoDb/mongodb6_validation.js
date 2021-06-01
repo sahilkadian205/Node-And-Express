@@ -82,12 +82,16 @@ createCourse();
 //     price : {type:Number,                   //price is required when isPublished is true and 10< price <50
 //             min:10,
 //             max:50,
+//             set : (v)=>Math.round(v),
+//             get : (v)=>Math.round(v),
 //             required:function(){
 //                 return this.isPublished
 //             }},
 //     category:{
 //         type:String,
 //         required:true,
-//         enum:['node','javascript']    //category with these values in array will pass validation
+//         enum:['node','javascript'],    //category with these values in array will pass validation
+//         lowercase:true,
+//         //uppercase:true
 //     }        
 // });
