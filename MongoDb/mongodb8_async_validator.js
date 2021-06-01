@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost:27017/playground')
         .catch(()=>console.log('Not able to connect mongodb........',err));
 
 const courseSchema = new mongoose.Schema({
-    name : String,
+    name : {type:String,required:true},
     author : String,
     tags : {
         type:Array,
@@ -32,7 +32,7 @@ const courseSchema = new mongoose.Schema({
 const Course = mongoose.model('Course',courseSchema);    
  
 const course = new Course({
-    name : 'React Js', 
+    //name : 'React Js', 
     author : 'Mosh',
     tags : [],    //or tags:null or just remove tags property and see output.You will get - 'Tags should have atleast one tag.'
     isPublished : true,
@@ -46,7 +46,7 @@ async function createCourse(){
     }
     catch(ex){
         for(fields in ex.errors){
-            console.log(ex.errors[fields]);   //Now you can see errors more descriptively.This is called validation errors.
+            console.log(ex.errors[fields].message);   //Now you will get mutiple validation errors if multiple validation fails.
         }
     }
 }
