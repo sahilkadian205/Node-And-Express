@@ -24,5 +24,3 @@ console.log(global.x);  //If we run this in brower and log window.x then we will
 //In real life application we have lots of javascript files and we can have variables with same name in two or more files. Now,if this variable 
 // x is global so it will get overrided by variable in other files which can cause problems in application.
 //That's why we need modules. Node application follows modular approach.
-
-
