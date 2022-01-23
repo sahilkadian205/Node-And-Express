@@ -56,7 +56,7 @@
 //   }
 //"mongoose": "^5.12.11"  5-major verison, 12 - minor version, 11 - patch version
 
-//minor version is released when new functionality is added and can break existing api.
+//major version is released when new functionality is added and can break existing api.
 //minor version is released when new functionality is added without changing existing api.
 //patch verion is released when some bug is fixed.
 
